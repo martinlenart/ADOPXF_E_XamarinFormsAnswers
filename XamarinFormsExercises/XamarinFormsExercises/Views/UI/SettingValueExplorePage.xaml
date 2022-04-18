@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsExercises.Views.UI.SelectingValueExplorePage"
+             xmlns:models="clr-namespace:XamarinFormsExercises.Models"
+             Title="Selecting Value Exploration"
+             Padding="10">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <CheckBox x:Name="checkbox" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" WidthRequest="200" />
+            <Label Text="CheckBox is False" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference checkbox}, Path=IsChecked}" Value="True">
+                        <Setter Property="Text" Value="CheckBox is True" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Slider x:Name="slider" Minimum="0" Maximum="100" Value ="50" VerticalOptions="CenterAndExpand" WidthRequest="200" />
+            <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='Slider value is {0:F1}'}"
+               FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+            <Stepper x:Name="stepper" Minimum="0" Maximum="10" Increment="0.1" HorizontalOptions="Center" 
+                     VerticalOptions="CenterAndExpand" WidthRequest="200"/>
+            <Label Text="{Binding Source={x:Reference stepper}, Path=Value, StringFormat='Stepper value is {0:F1}'}"
+               FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Switch x:Name="switch" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" WidthRequest="200"/>
+            <Label Text="Switch is False" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label" Binding="{Binding Source={x:Reference switch}, Path=IsToggled}" Value="True">
+                        <Setter Property="Text" Value="Switch is True" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+             <DatePicker Format="d" VerticalOptions="CenterAndExpand" Margin="10, 0" WidthRequest="300"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+             <TimePicker Format="T" VerticalOptions="CenterAndExpand" Margin="10, 0" />
+        </StackLayout >
+        <StackLayout Orientation="Horizontal">
+            <Picker x:Name="picker" Title="Persons" VerticalOptions="CenterAndExpand" Margin="10, 0" WidthRequest="300"
+                     SelectedIndexChanged="picker_SelectedIndexChanged"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

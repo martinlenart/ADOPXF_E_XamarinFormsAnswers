@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsExercises.Views.NonTrivialBinding.BindingExercise">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <!-- Step 1 begin -->
+                <Label Text="{Binding Source={x:Reference mySlider}, Path=Value}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Slider x:Name="mySlider" Minimum="0" Maximum="1" />
+                <!-- Step 1 end -->
+            </StackLayout>
+            <StackLayout>
+                <!-- Step 1 begin -->
+                <Label Text="{Binding Source={x:Reference myStepper}, Path=Value}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Stepper x:Name="myStepper" Minimum="0" Maximum="10" Increment="1" />
+                <!-- Step 1 end -->
+            </StackLayout>
+            <StackLayout>
+                <!-- Step 2 begin -->
+                <Button Text="Set Middle" Clicked="Button_Clicked"/>
+                <!-- Step 2 end -->
+            </StackLayout>
+            <StackLayout>
+                <!-- Step 3 begin -->
+                <Label Text="{Binding SliderValue}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Slider Minimum="0" Maximum="1" Value ="{Binding SliderValue}" />
+                <!-- Step 3 end -->
+            </StackLayout>
+            <StackLayout>
+                <!-- Step 3 begin -->
+                <Label Text="{Binding StepperValue}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Stepper Minimum="0" Maximum="10" Increment="1" Value ="{Binding StepperValue}" />
+                <!-- Step 3 end -->
+                <Button Text="Check Instance Values" Clicked="Button_Clicked_2" />
+            </StackLayout>
+            <StackLayout>
+                <!-- Step 4 begin -->
+                <Button Text="Set Middle" Clicked="Button_Clicked_1" Command="{Binding SetMiddleCommand}"/>
+                <!-- Step 4 end -->
+
+                <!-- Step 6 begin -->
+                <Button Text="Set Middle" Command="{Binding SetMiddleCommand}"/>
+                <!-- Step 6 end -->
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

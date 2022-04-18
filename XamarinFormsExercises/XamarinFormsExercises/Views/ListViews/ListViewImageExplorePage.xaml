@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XamarinFormsExercises.Views.ListViews.ListViewImageExplorePage"
+             Padding="20">
+    <StackLayout>
+        <ListView x:Name="ImageList" ItemTapped="ListViewItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="25,10,55,15">
+                            <StackLayout HorizontalOptions="Start" Orientation="Vertical" Padding="3">
+                                <Image Source="{Binding Source}" HorizontalOptions="FillAndExpand" WidthRequest="50"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="StartAndExpand" Orientation="Vertical" Padding="5">
+                                <Label HorizontalOptions="Start" FontSize="20" Text="{Binding Title}"/>
+                                <Label HorizontalOptions="Start" FontSize="12" Text="{Binding Description}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

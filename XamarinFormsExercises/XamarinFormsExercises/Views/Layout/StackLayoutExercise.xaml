@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="XamarinFormsExercises.Views.Layout.StackLayoutExercise"
+Title="StackLayout Demo - XAML">
+	
+    <ContentPage.Content>
+        <StackLayout Spacing="10">
+            <BoxView Color="Yellow" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+            <BoxView Color="Green" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+            <StackLayout Rotation="50" Opacity="0.5">
+                <BoxView Color="Blue" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                <BoxView Color="Aqua" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <BoxView Color="Bisque" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+            <StackLayout Orientation="Horizontal" Spacing="50">
+                <BoxView Color="DarkSalmon" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                <BoxView Color="LightCoral" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                <BoxView Color="Fuchsia" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                <StackLayout Orientation="Vertical" WidthRequest="800" >
+                    <BoxView Color="LightBlue" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="LightPink" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="SaddleBrown" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="DeepPink" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+                <StackLayout Orientation="Vertical" >
+                    <BoxView Color="LightBlue" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="LightPink" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="SaddleBrown" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                    <BoxView Color="DeepPink" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

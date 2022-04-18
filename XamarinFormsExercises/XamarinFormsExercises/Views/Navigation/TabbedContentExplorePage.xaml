@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsExercises.Views.Navigation.TabbedContentExplorePage"
+            Title="Tabbed Content Exploration">
+ 
+    <TabbedPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage Title="{Binding Name}">
+                <ContentPage.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Label">
+                            <Setter Property="FontSize" Value="Large" />
+                            <Setter Property="HorizontalTextAlignment" Value="End" />
+                        </Style>
+                    </ResourceDictionary>
+                </ContentPage.Resources>
+
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                    <Label Text="{Binding Name}" />
+                    <Label Text="{Binding Number}" />
+                    <Label>
+                        <Label.Text>
+                            <MultiBinding StringFormat="{}{0} is number {1}">
+                                <Binding Path="Name"/>
+                                <Binding Path="Number"/>
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+                    <Label Text="{MultiBinding {Binding Number}, {Binding Name}, 
+                        StringFormat='{}{0} is indeed {1}'}" />
+                </StackLayout>
+
+            </ContentPage>
+        </DataTemplate>
+    </TabbedPage.ItemTemplate>
+</TabbedPage>

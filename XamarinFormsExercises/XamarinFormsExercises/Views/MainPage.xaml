@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="XamarinFormsExercises.Views.MainPage" 
+				xmlns:views="using:XamarinFormsExercises.Views"
+				Title="Exploration and Exercises">
+    <ContentPage.Padding>
+	    <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS">10,20,10,5</On>
+            <On Platform="Android">10,0,10,5</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+	<TableView Intent="Menu">
+		<TableView.Root>
+			<TableSection Title="Layout Exploration and exercises">
+                <TextCell Text="StackLayout Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.StackLayoutExploration}" />
+                <TextCell Text="StackLayout Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.StackLayoutExercise}" />
+
+                <TextCell Text="AbsoluteLayout Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.AbsoluteLayoutExploration}" />
+                <TextCell Text="AbsoluteLayout Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.AbsoluteLayoutExercise}" />
+                <TextCell Text="AbsoluteLayout Demo" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.AbsoluteLayoutDemo}" />
+
+                <TextCell Text="RelativeLayout Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.RelativeLayoutExploration}" />
+                <TextCell Text="RelativeLayout Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.RelativeLayoutExercise}" />
+                <TextCell Text="RelativeLayout Demo" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.RelativeLayoutDemo}" />
+
+                <TextCell Text="Grid Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.GridLayoutExploration}" />
+                <TextCell Text="Grid Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.GridLayoutExercise}" />
+                <TextCell Text="Grid Demo" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.GridLayoutDemo}" />
+
+                <TextCell Text="Monkey Music Demo" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.MonkeyMusic}" />
+                <TextCell Text="ScrollView Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:Layout.ScrollViewExploration}" />
+            </TableSection>
+
+            <TableSection Title="Basic Bindings">
+                <TextCell Text="Basic Binding Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:BasicBinding.BasicBindingExplorePage}" />
+                <TextCell Text="Alternative Binding Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:BasicBinding.AlternativeBindingExplorePage}" />
+                <TextCell Text="Binding Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:BasicBinding.BindingExercisePage}" />
+
+                <TextCell Text="BindingContext Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:BasicBinding.BindingContextExplorePage}" />
+                <TextCell Text="BindingContext Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:BasicBinding.BindingContextExercisePage}" />
+            </TableSection>
+            <TableSection Title="UI Selecting Value">
+                <TextCell Text="UI Selecting Value Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:UI.SelectingValueExplorePage}" />
+                <TextCell Text="UI Selecting Value Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:UI.SelectingValueExercisePage}" />
+            </TableSection>
+            <TableSection Title="Scrollable Lists">
+                <TextCell Text="ListView DataModel Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:ListViews.ListViewDataModelExplorePage}" />
+                <TextCell Text="ListView DataModel Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:ListViews.ListViewDataModelExercisePage}" />
+                <TextCell Text="ListView with Image Exploration"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViews.ListViewImageExplorePage}" />
+                <TextCell Text="ListView with Image Exercise"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViews.ListViewImageExercisePage}" />
+                <TextCell Text="ListView with Button Exploration"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViews.ListViewButtonExplorePage}" />
+                <TextCell Text="ListView with Button Exercise"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViews.ListViewButtonExercisePage}" />
+                <TextCell Text="ListView Grouped Exploration"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViews.ListViewGroupedExplorePage}" />
+                <TextCell Text="ListView Grouped Exercise"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViews.ListViewGroupedExercisePage}" />
+            </TableSection>
+            <TableSection Title="Navigation">
+                <TextCell Text="Tabbed Content Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:Navigation.TabbedContentExplorePage}" />
+                <TextCell Text="Tabbed Content Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:Navigation.TabbedContentExercisePage}" />
+                <TextCell Text="Carousel Content Exploration" Tapped="navigateToPage" CommandParameter="{x:Type views:Navigation.CarouselNavigationExplore}" />
+                <TextCell Text="Carousel Content Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:Navigation.CarouselNavigationExercise}" />
+            </TableSection>
+            <TableSection Title="Non Trivial Binding">
+                <TextCell Text="Grid Binding Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding.GridBindingExercise}" />
+                <TextCell Text="Binding Exercise" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding.BindingExercise}" />
+                <TextCell Text="Binding with ViewModel Final" Tapped="navigateToPage" CommandParameter="{x:Type views:NonTrivialBinding.BindingFinal}" />
+            </TableSection>
+        </TableView.Root>
+	</TableView>
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="XamarinFormsExercises.Views.ListViews.ListViewButtonExplorePage"
+				Padding="20">
+    <StackLayout>
+		<ListView x:Name="ButtonList" RowHeight="100" HasUnevenRows="true" ItemTapped="ButtonList_ItemTapped" >
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="5,10,5,15">
+							<StackLayout HorizontalOptions="Start" Orientation="Vertical">
+								<Label HorizontalOptions="Start" FontSize="20" FontAttributes="Bold" 
+									  Text="{Binding Title}"/>
+								<Label HorizontalOptions="Start" FontSize="12" FontAttributes="Bold" 
+									   Text="{Binding Description}"/>	 
+							</StackLayout>
+							<StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" WidthRequest="260">
+								<Label HorizontalOptions="Center" FontSize="25" Text="{Binding Price}"/>
+								<Button x:Name="BuyButton" Text="Buy Now" HorizontalOptions="EndAndExpand" 
+										Clicked="BuyClicked" CommandParameter="{Binding .}"/>
+							</StackLayout>
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+    </StackLayout>
+</ContentPage>

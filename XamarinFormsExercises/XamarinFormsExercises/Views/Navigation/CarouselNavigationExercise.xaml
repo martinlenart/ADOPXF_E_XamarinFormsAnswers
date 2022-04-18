@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CarouselPage Title="Carousel Using CarouselPage"
+              xmlns:views="clr-namespace:Carousel.Views"
+	          xmlns="http://xamarin.com/schemas/2014/forms" 
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              x:Class="XamarinFormsExercises.Views.Navigation.CarouselNavigationExercise"
+              Padding="20">
+</CarouselPage>

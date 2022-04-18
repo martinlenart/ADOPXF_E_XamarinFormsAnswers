@@ -1,0 +1,185 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\ListViews\ListViewButtonExercisePage.xaml.cs">
+      <DependentUpon>ListViewButtonExercisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ListViews\ListViewButtonExplorePage.xaml.cs">
+      <DependentUpon>ListViewButtonExplorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ListViews\ListViewDataModelExercisePage.xaml.cs">
+      <DependentUpon>ListViewDataModelExercisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ListViews\ListViewDataModelExplorePage.xaml.cs">
+      <DependentUpon>ListViewDataModelExplorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ListViews\ListViewGroupedExercisePage.xaml.cs">
+      <DependentUpon>ListViewGroupedExercisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ListViews\ListViewGroupedExplorePage.xaml.cs">
+      <DependentUpon>ListViewGroupedExplorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ListViews\ListViewImageExplorePage.xaml.cs">
+      <DependentUpon>ListViewImageExplorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ListViews\ListViewImageExercisePage.xaml.cs">
+      <DependentUpon>ListViewImageExercisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Navigation\CarouselNavigationExercise.xaml.cs">
+      <DependentUpon>CarouselNavigationExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Navigation\WebViewExercisePage.xaml.cs">
+      <DependentUpon>WebViewExercisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Navigation\WebViewExplorePage.xaml.cs">
+      <DependentUpon>WebViewExplorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Navigation\CarouselNavigationExplore.xaml.cs">
+      <DependentUpon>CarouselNavigationExplore.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Navigation\TabbedContentExercisePage.xaml.cs">
+      <DependentUpon>TabbedContentExercisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Navigation\TabbedContentExplorePage.xaml.cs">
+      <DependentUpon>TabbedContentExplorePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NonTrivialBinding\BindingFinal.xaml.cs">
+      <DependentUpon>BindingFinal.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UI\SettingValueExercisePage.xaml.cs">
+      <DependentUpon>SettingValueExercisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UI\SettingValueExplorePage.xaml.cs">
+      <DependentUpon>SettingValueExplorePage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\Navigation\CarouselNavigationExercise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Navigation\WebViewExercisePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Navigation\WebViewExplorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Navigation\CarouselNavigationExplore.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Navigation\TabbedContentExercisePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Navigation\TabbedContentExplorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BasicBinding\AlternativeBindingExplorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BasicBinding\BasicBindingExplorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BasicBinding\BindingContextExercisePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BasicBinding\BindingContextExplorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BasicBinding\BindingExercisePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\AbsoluteLayoutDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\AbsoluteLayoutExercise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\AbsoluteLayoutExploration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\GridLayoutDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\GridLayoutExercise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\GridLayoutExploration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\MonkeyMusic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\RelativeLayoutDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\RelativeLayoutExercise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\RelativeLayoutExploration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\ScrollViewExploration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\StackLayoutExercise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Layout\StackLayoutExploration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ListViews\ListViewButtonExercisePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ListViews\ListViewButtonExplorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ListViews\ListViewDataModelExercisePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ListViews\ListViewDataModelExplorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ListViews\ListViewGroupedExercisePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ListViews\ListViewGroupedExplorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ListViews\ListViewImageExercisePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ListViews\ListViewImageExplorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NonTrivialBinding\BindingExercise.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NonTrivialBinding\GridBindingExercise.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\UI\SettingValueExercisePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\UI\SettingValueExplorePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

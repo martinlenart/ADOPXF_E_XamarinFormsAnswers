@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsExercises.Views.BasicBinding.AlternativeBindingExplorePage"
+             Title="Alternative Binding Exploration">
+    <StackLayout Padding="10, 0">
+        <Label Text="Label with alternative binding in XAML"
+              FontSize="30"
+              HorizontalOptions="Center"
+              VerticalOptions="CenterAndExpand"
+              Rotation="{Binding Source={x:Reference slider1}, Path=Value}" />
+
+        <Slider x:Name="slider1"
+                Maximum="360"
+                VerticalOptions="CenterAndExpand" />
+
+        <Label x:Name="label2" Text="Label with alternative binding in C#"
+               FontSize="30"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+
+        <Slider x:Name="slider2"
+                Maximum="360"
+                VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsExercises.Views.Navigation.TabbedContentExercisePage"
+            Title="City Population">
+ 
+    <TabbedPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage Title="{Binding Name}">
+                <ContentPage.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Label">
+                            <Setter Property="FontSize" Value="Large" />
+                            <Setter Property="HorizontalTextAlignment" Value="End" />
+                        </Style>
+                    </ResourceDictionary>
+                </ContentPage.Resources>
+
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                    <Label Text="{Binding Population, StringFormat='Population: {0:N0}'}" />
+                    <Label>
+                        <Label.Text>
+                            <MultiBinding StringFormat="{}{0} has {1:N0} happy citizens">
+                                <Binding Path="Name"/>
+                                <Binding Path="Population"/>
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+                    <Label Text="{MultiBinding {Binding Population}, {Binding Name}, 
+                        StringFormat='{}Yoda: {0:N0} happy citizens has {1}'}" />
+                </StackLayout>
+
+            </ContentPage>
+        </DataTemplate>
+    </TabbedPage.ItemTemplate>
+</TabbedPage>

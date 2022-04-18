@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="XamarinFormsExercises.Views.ListViews.ListViewButtonExercisePage"
+				Padding="20">
+    <StackLayout>
+        <ListView x:Name="ButtonList" RowHeight="100" HasUnevenRows="true" ItemTapped="ButtonList_ItemTapped" >
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="5,10,5,15">
+                            <StackLayout HorizontalOptions="Start" Orientation="Vertical" Padding="3">
+                                <Image Source="{Binding ImageSrc}" HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="Start" Orientation="Vertical">
+								<Label HorizontalOptions="Start" FontSize="20" FontAttributes="Bold" 
+									  Text="{Binding Name}"/>
+								<Label HorizontalOptions="Start" FontSize="12" FontAttributes="Bold" 
+									   Text="{Binding Continent}"/>	 
+							</StackLayout>
+							<StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" WidthRequest="260">
+								<Button x:Name="MoreButton" Text="Find out more" HorizontalOptions="EndAndExpand" 
+									 Clicked="MoreButton_Clicked" CommandParameter="{Binding .}"/>
+							</StackLayout>
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+        <Frame BorderColor="Black">
+            <StackLayout>
+                <Button Text="Next" Clicked="Button_Clicked" />
+                <Button Text="Back" Clicked="Button_Clicked_1" />
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
